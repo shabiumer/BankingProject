@@ -1,29 +1,11 @@
 package LoginPage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import CommonFunctions.SetUp;
 
 public class LoginFunction extends SetUp{
 	
-	@FindBy(name="uid")
-	public WebElement UserID;
-	
-	@FindBy(name="password")
-	public WebElement Password;
-	
-	@FindBy(name="btnLogin")
-	public WebElement LoginButton;
-	
-	public LoginFunction() {
-		super();
-		PageFactory.initElements(driver, this);
-	}
-	
-	public void Login() {
+	public void Login() { //uid=mngr151888 password=nytaqyp btnLogin
 		
 		driver.findElement(By.name("uid")).clear();
 		driver.findElement(By.name("uid")).sendKeys("mngr151888");
